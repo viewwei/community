@@ -12,4 +12,5 @@ public class FirstController {
         model.addAttribute("name", name);
         return "greeting";
     }
+
 }
