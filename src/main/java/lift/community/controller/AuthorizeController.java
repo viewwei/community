@@ -19,6 +19,7 @@ public class AuthorizeController {
     private  String redirect_ur;
     @Autowired
     private GithubProvider githubProvider;
+
     @GetMapping("/callBack")
     public  String callback(@RequestParam(name = "code") String code,@RequestParam(name = "state")String state){
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
