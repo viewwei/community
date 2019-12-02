@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AuthorizeController {
     @Value("${github.client_id}")
     private  String client_id;
+    @Value("${github.client_secret}")
     private  String client_secret;
+    @Value("${github.redirect_ur}")
     private  String redirect_ur;
     @Autowired
     private GithubProvider githubProvider;
@@ -26,8 +28,6 @@ public class AuthorizeController {
         accessTokenDTO.setRedirect_url(redirect_ur);
         accessTokenDTO.setState(state);
        String accessToken =  githubProvider.getAccessToken(accessTokenDTO);
-        GithubUser githubUser = githubProvider.getUser(accessToken);
-
         return  "index";
     }
 }
