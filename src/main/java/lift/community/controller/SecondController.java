@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
-
 @Controller
 public class SecondController {
     @Autowired
@@ -28,9 +27,6 @@ public class SecondController {
         user.setGmtCreate(System.currentTimeMillis());
         user.setGmtModified(user.getGmtCreate());
         userMapper.insert(user);
-//        userMapper.insert(2);
-
-
         //冲定向
         return  "redirect:/";
     }
