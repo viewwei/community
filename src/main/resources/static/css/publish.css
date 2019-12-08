@@ -1,0 +1,17 @@
+body{
+    background-color: #efefef;
+}
+.main-content{
+    background: #ffffff;
+    margin: 30px;
+    padding: 0px 20px 20px;
+
+}
+.publish-left{
+    border-right: 1px solid #efefef;
+
+}
+.publish-submit{
+    float: right;
+    padding: 10px 40px;
+ }
