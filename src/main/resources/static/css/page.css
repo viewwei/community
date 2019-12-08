@@ -1,0 +1,20 @@
+.media-object{
+    width: 60px;
+    height: 40px;
+    padding-left: 20px;
+}
+.main-content{
+    margin: 20px;
+
+}
+.text-desc{
+    font-size: 12px;
+    font-weight: normal;
+    collapse: #999;
+}
+body{
+    background-color: #efefef;
+}
+.main-content{
+    background: #ffffff;
+}

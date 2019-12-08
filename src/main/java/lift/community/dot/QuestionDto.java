@@ -1,9 +1,10 @@
-package lift.community.Model;
+package lift.community.dot;
 
+import lift.community.Model.User;
 import lombok.Data;
 
 @Data
-public class Question {
+public class QuestionDto {
     private  Integer id;
     private  String title;
     private  String description;
@@ -14,6 +15,7 @@ public class Question {
     private  Integer comment_count;
     private  Integer link_count;
     private  String tag;
+    private User user;
 
     public Integer getId() {
         return id;
@@ -93,5 +95,13 @@ public class Question {
 
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
