@@ -1,7 +1,6 @@
 .media-object{
-    width: 60px;
+    width: 40px;
     height: 40px;
-    padding-left: 20px;
 }
 .main-content{
     margin: 20px;
@@ -17,4 +16,7 @@ body{
 }
 .main-content{
     background: #ffffff;
+}
+.view-page{
+    float: right;
 }
