@@ -21,27 +21,28 @@ public class IndexController {
     private UserMapper userMapper;
     @Autowired
     private QuestionService questionService;
+
     @GetMapping("/")
     public String index(HttpServletRequest httpServletRequest, Model model,
-                        @RequestParam(name ="page",defaultValue = "1") Integer page,
-                       @RequestParam(name = "size",defaultValue = "5") Integer size
-                        ) {
-        Cookie[] cookies = httpServletRequest.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if ("token".equals(cookie.getName())) {
-                    String token = cookie.getValue();
-                    User user = userMapper.findByToken(token);
-                    if (user != null) {
-                        httpServletRequest.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
-        }
+                        @RequestParam(name = "page", defaultValue = "1") Integer page,
+                        @RequestParam(name = "size", defaultValue = "5") Integer size
+    ) {
+//        Cookie[] cookies = httpServletRequest.getCookies();
+//        if (cookies != null) {
+//            for (Cookie cookie : cookies) {
+//                if ("token".equals(cookie.getName())) {
+//                    String token = cookie.getValue();
+//                    User user = userMapper.findByToken(token);
+//                    if (user != null) {
+//                        httpServletRequest.getSession().setAttribute("user", user);
+//                    }
+//                    break;
+//                }
+//            }
+//        }
 //        List<QuestionDto> questionList = questionService.list();
-        PageinationDTO pagination = questionService.list(page,size);
-        model.addAttribute("pagination",pagination);
+        PageinationDTO pagination = questionService.list(page, size);
+        model.addAttribute("pagination", pagination);
 
         return "index";
     }

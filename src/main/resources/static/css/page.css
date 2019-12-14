@@ -1,22 +1,28 @@
-.media-object{
+.media-object {
     width: 40px;
     height: 40px;
 }
-.main-content{
+
+.main-content {
     margin: 20px;
+    padding: 10px;
 
 }
-.text-desc{
+
+.text-desc {
     font-size: 12px;
     font-weight: normal;
     collapse: #999;
 }
-body{
+
+body {
     background-color: #efefef;
 }
-.main-content{
+
+.main-content {
     background: #ffffff;
 }
-.view-page{
+
+.view-page {
     float: right;
 }
